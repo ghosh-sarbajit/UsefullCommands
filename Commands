@@ -20,3 +20,11 @@ push an existing repository from the command line
 git remote add origin https://github.com/ghosh-sarbajit/UsefullGitCommands.git
 git branch -M main
 git push -u origin main
+
+3. Delete a file from a GitHub repository from the terminal
+git rm [file]
+
+If the file has some edit
+git rm -f [file]
+git commit -m 'YourMsg'
+git push
