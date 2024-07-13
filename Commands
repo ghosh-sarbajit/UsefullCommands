@@ -23,8 +23,10 @@ git push -u origin main
 
 3. Delete a file from a GitHub repository from the terminal
 git rm [file]
-
 If the file has some edit
 git rm -f [file]
+
+4. GitHub push
+git add -A
 git commit -m 'YourMsg'
 git push
