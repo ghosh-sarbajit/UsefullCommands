@@ -26,6 +26,12 @@ git rm [file]
 If the file has some edit
 git rm -f [file]
 
+4. To know which branch you are in
+git rev-parse --abbrev-ref HEAD
+
+5. To view diff of your local and remote branch
+git diff [branch name]
+
 4. GitHub push
 git add -A
 git commit -m 'YourMsg'
