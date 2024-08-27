@@ -11,9 +11,9 @@ conda deactivate
 
 rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive &
 
-https://drive.google.com/file/d/[fileID]/view?usp=sharing
+```https://drive.google.com/file/d/[fileID]/view?usp=sharing```
 
-gdown 'https://drive.google.com/uc?export=download&id=[fileID]'
+gdown '```https://drive.google.com/uc?export=download&id=[fileID]```'
 
 rclone copy ~/file OneDrive:/PATH
 
@@ -43,7 +43,7 @@ git push -u origin main
 
 **push an existing repository from the command line**
 
-git remote add origin https://github.com/user/repo.git
+git remote add origin ```https://github.com/user/repo.git```
 
 git branch -M main
 
