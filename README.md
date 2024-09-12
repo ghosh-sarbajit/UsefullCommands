@@ -1,4 +1,6 @@
 ## Creating a new conda env
+source ~/.bashrc
+
 conda env list
 
 conda create --name EnvName python=3.8
