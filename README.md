@@ -77,13 +77,15 @@ git push
 
 **Tmux**
 
-tmux new-session -s [SessionName]
+tmux new-session -s \[SessionName\]
 
-New Pane Ctrl + b %
+New Pane: Ctrl + b %
 
-New Vertical Pane Ctrl + b "
+New Vertical: Pane Ctrl + b "
 
-Toggle the last active pane Ctrl + b ;
+Toggle to the last active pane: Ctrl + b ;
+
+tmux attach-session -t \[SessionName\]
 
 
 
