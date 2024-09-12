@@ -75,3 +75,16 @@ git commit -m 'YourMsg'
 
 git push
 
+**Tmux**
+
+tmux new-session -s [SessionName]
+
+New Pane Ctrl + b %
+
+New Vertical Pane Ctrl + b "
+
+Toggle the last active pane Ctrl + b ;
+
+
+
+
