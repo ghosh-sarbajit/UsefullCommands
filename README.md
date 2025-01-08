@@ -100,6 +100,13 @@ Toggle to the last active pane: Ctrl + b ;
 
 tmux attach-session -t \[SessionName\]
 
+**PDF Manipulation**
 
+pdfseparate
 
+pdfunite
+
+pdftk jhva101.pdf jhva102.pdf cat output merged.pdf
+
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=foo-compressed.pdf foo.pdf
 
