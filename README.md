@@ -36,9 +36,9 @@ rclone copy ~/file OneDrive:/PATH
 
 The SSH key resides on your machine in the folder ~/.ssh
 
-ssh-keygen -t rsa -b 4096  -f \[filename\]
+ssh-keygen
 
-Add the public key to your GitHub account
+Move to ~/.ssh and add the public key to your GitHub account (*.pub file)
 
 **create a new repository on the command line**
 
