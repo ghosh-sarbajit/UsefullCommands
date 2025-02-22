@@ -22,6 +22,8 @@ conda activate EnvName
 
 conda deactivate
 
+conda env remove --name EnvName
+
 **Rclone and OneDrive**
 
 rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive &
