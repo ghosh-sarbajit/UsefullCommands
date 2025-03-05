@@ -112,6 +112,16 @@ pdftk pdf1.pdf pdf2.pdf cat output merged.pdf
 
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=foo-compressed.pdf foo.pdf
 
+**Important things to install after fresh Ubuntu Installation**
+
+sudo apt install openssh-server net-tools
+
+**SSH Related commands**
+
+sudo systemctl status ssh
+
+sudo systemctl enable --now ssh
+
 **Gdown**
 
 gdown \[FileId\]
