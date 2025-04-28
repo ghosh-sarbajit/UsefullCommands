@@ -132,6 +132,8 @@ objdump --disassemble [file]
 
 gdown \[FileId\]
 
+gdown --folder \[FolderID]
+
 **Vim Motions**
 
 :sp [file]
@@ -143,5 +145,5 @@ gdown \[FileId\]
 (ctrl + w) w
 
 :Explore
-gdown --folder \[FolderID]
+
 
