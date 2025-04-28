@@ -122,9 +122,26 @@ sudo systemctl status ssh
 
 sudo systemctl enable --now ssh
 
+**ELf file**
+
+readelf -h [file]
+readelf -s [file]
+objdump --disassemble [file] 
+
 **Gdown**
 
 gdown \[FileId\]
 
+**Vim Motions**
+
+:sp [file]
+
+:vsp [file]
+
+:vsp
+
+(ctrl + w) w
+
+:Explore
 gdown --folder \[FolderID]
 
