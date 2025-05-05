@@ -146,4 +146,12 @@ gdown --folder \[FolderID]
 
 :Explore
 
+**VM control**
 
+VBoxManage list vms
+
+VBoxManage list runningvms
+
+VBoxManage controlvm "VmName" poweroff
+
+VBoxManage showvminfo "VmName"
