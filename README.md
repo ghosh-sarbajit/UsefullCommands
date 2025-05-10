@@ -28,10 +28,6 @@ conda env remove --name EnvName
 
 rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive &
 
-```https://drive.google.com/file/d/[fileID]/view?usp=sharing```
-
-gdown '```https://drive.google.com/uc?export=download&id=[fileID]```'
-
 rclone copy ~/file OneDrive:/PATH
 
 **Creating an SSH key**
