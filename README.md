@@ -125,7 +125,10 @@ sudo systemctl enable --now ssh
 **ELf file**
 
 readelf -h [file]
+
+
 readelf -s [file]
+
 objdump --disassemble [file] 
 
 **Gdown**
