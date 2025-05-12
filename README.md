@@ -126,7 +126,6 @@ sudo systemctl enable --now ssh
 
 readelf -h [file]
 
-
 readelf -s [file]
 
 objdump --disassemble [file] 
