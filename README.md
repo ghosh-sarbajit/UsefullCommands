@@ -28,7 +28,7 @@ conda env remove --name EnvName
 
 rclone listremotes
 
-rclone mount --daemon driveName: PATH_YOU_WANT_TO_MOUNT
+rclone mount --daemon driveName: PATH_OF_FOLDER_YOU_WANT_TO_MOUNT (Make sure that folder is created beforehand)
 
 rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive &
 
