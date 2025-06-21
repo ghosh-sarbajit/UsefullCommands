@@ -171,3 +171,9 @@ sudo apt install obs-studio
 **Video manipulation**
 
 ffmpeg -ss [start_time] -to [end_time] -i input.mp4 -c copy output.mp4
+
+**Format a Pendrive**
+
+sudo umount /dev/sdb1
+
+sudo mkfs.vfat -I /dev/sdb
