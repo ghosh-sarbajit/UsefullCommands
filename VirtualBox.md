@@ -10,6 +10,6 @@ dpkg -l | grep libreoffice
 
 sudo apt-get update
 
-sudo apt-get install build-essential gcc make perl dkms
+sudo apt-get install build-essential gcc make perl dkms python3-pip
 
 reboot
