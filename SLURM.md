@@ -1,4 +1,4 @@
-** SLURM commands **
+**SLURM commands**
 
 sinfo
 
