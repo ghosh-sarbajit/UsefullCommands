@@ -12,4 +12,6 @@ sudo apt-get update
 
 sudo apt-get install build-essential gcc make perl dkms python3-pip vim net-tools
 
+sudo apt-get install tmux screen gedit gimp shotwell dia xfig obs-studio
+
 reboot
