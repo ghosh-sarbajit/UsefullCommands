@@ -10,7 +10,7 @@ dpkg -l | grep libreoffice
 
 sudo apt-get update
 
-sudo apt-get install build-essential gcc make perl dkms python3-pip vim net-tools tmux screen openssh-server
+sudo apt-get install build-essential gcc make perl dkms python3-pip vim net-tools tmux screen openssh-server ffmpeg
 
 sudo apt-get install gedit gimp shotwell dia xfig obs-studio xournalpp vlc
 
