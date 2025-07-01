@@ -172,6 +172,8 @@ sudo apt install obs-studio
 
 ffmpeg -ss [start_time] -to [end_time] -i input.mp4 -c copy output.mp4
 
+ffmpeg -i input_video.mp4 -vn -acodec copy output_audio.aac
+
 **Format a Pendrive**
 
 sudo umount /dev/sdb1
