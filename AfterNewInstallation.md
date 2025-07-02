@@ -1,5 +1,6 @@
-### for VM
-### Install Guest Additions CD Image on VirtualBox
+# for VM
+
+Install Guest Additions CD Image on VirtualBox
 
 sudo apt-get purge libreoffice*
 
