@@ -26,8 +26,12 @@ other things to install: R, RStudio, Miniconda, VSCode, VirtualBox
 # some important files
 
 ssh client
+
 ssh localhost
+
 /etc/ssh/sshd_config
 
+
 sudo vim /etc/default/grub
+
 sudo update-grub
