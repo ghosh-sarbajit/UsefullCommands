@@ -20,6 +20,8 @@ sudo apt-get install build-essential gcc make perl dkms python3-pip vim net-tool
 
 sudo apt-get install gedit gimp shotwell dia xfig obs-studio xournalpp vlc
 
+sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm # KVM
+
 reboot
 
 other things to install: R, RStudio, Miniconda, VSCode, VirtualBox
