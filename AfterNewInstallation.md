@@ -1,7 +1,5 @@
 # for VM
 
-Install Guest Additions CD Image on VirtualBox
-
 sudo apt-get purge libreoffice*
 
 sudo apt-get autoremove --purge
@@ -13,6 +11,8 @@ dpkg -l | grep libreoffice
 sudo apt-get update
 
 sudo apt-get install build-essential gcc make perl dkms
+
+Install Guest Additions CD Image on VirtualBox
 
 # for real machine
 
