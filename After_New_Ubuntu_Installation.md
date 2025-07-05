@@ -26,6 +26,10 @@ reboot
 
 other things to install: R, RStudio, Miniconda, VSCode, VirtualBox
 
+sudo apt install fonts-liberation fonts-freefont-ttf fonts-noto # free fonts
+
+sudo apt install ubuntu-restricted-extras # contains microsoft proprietary font, which will download in a exe container
+
 # some important files
 
 ssh client
