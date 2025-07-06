@@ -180,6 +180,10 @@ ffmpeg -ss [start_time] -to [end_time] -i input.mp4 -c copy output.mp4
 
 ffmpeg -i input_video.mp4 -vn -acodec copy output_audio.aac
 
+**Open a profile in a GNOME Terminal**
+
+gnome-terminal --tab --profile="Bharati"
+
 **Format a Pendrive**
 
 sudo umount /dev/sdb1
