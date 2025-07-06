@@ -42,6 +42,12 @@ ssh-keygen
 
 Move to ~/.ssh and add the public key to your GitHub account (*.pub file)
 
+**Creating an SSH Key with particular file name**
+
+ssh-keygen -f file
+
+ssh-copy-id -i file.pub user_name@ip_address
+
 **create a new repository on the command line**
 
 echo "# UsefullGitCommands" >> README.md
