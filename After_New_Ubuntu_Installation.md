@@ -16,6 +16,7 @@ Install Guest Additions CD Image on VirtualBox
 
 # for real machine
 
+```
 sudo apt-get install build-essential gcc make perl dkms python3-pip vim net-tools git tmux screen openssh-server ffmpeg tree
 
 sudo apt-get install gedit gimp shotwell dia xfig obs-studio xournalpp vlc
@@ -24,13 +25,21 @@ sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu
 
 reboot
 
+```
+
+
 other things to install: R, RStudio, Miniconda, VSCode, VirtualBox
 
 sudo apt install fonts-liberation fonts-freefont-ttf fonts-noto # free fonts
 
 sudo apt install ubuntu-restricted-extras # contains microsoft proprietary font, which will download in a exe container
 
-sudo apt-get install geogebra kalgebra xcas # for math softwares
+### for math software
+
+```
+sudo apt-get install geogebra kalgebra xcas 
+```
+
 
 # some important files
 
