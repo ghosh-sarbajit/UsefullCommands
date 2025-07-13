@@ -40,6 +40,12 @@ sudo apt install ubuntu-restricted-extras # contains microsoft proprietary font,
 sudo apt-get install geogebra kalgebra xcas 
 ```
 
+### for astronomy
+
+```
+sudo apt-get install kstars stellarium
+```
+another good one is celestia
 
 # some important files
 
