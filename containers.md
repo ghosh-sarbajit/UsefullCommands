@@ -8,7 +8,7 @@ distrobox list
 
 distrobox-stop ubuntu-2204
 
-distrobox delete --name ubuntu-2204
+distrobox-rm ubuntu-2204
 
 distrobox-export --app firefox --name ubuntu-box
 
