@@ -2,6 +2,8 @@
 
 distrobox create --image ubuntu:22.04 --name ubuntu-2204
 
+distrobox create --image docker.io/library/archlinux:latest --name myarch
+
 distrobox enter ubuntu-2204
 
 distrobox list
