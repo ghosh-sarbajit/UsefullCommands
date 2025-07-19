@@ -184,6 +184,14 @@ ffmpeg -i input_video.mp4 -vn -acodec copy output_audio.aac
 
 gnome-terminal --tab --profile="Bharati"
 
+**Toggle mouse in Tmux**
+
+In ~/.tmux.conf write the follwing line
+
+bind m set -g mouse \; display "Mouse: #{?mouse,ON,OFF}"
+
+Then in any tmux session press Ctrl+b followed by :source-file ~/.tmux.conf
+
 **Format a Pendrive**
 
 sudo umount /dev/sdb1
