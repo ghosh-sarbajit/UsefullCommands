@@ -7,7 +7,7 @@
 #!/bin/bash
 
 # Configuration
-USER="sarbajit.ghosh"
+USER="username"
 PASSFILE="$HOME/.ssh/ssh_pass"
 
 # Server mapping
