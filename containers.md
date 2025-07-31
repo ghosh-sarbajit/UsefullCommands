@@ -42,7 +42,7 @@ docker run -it -d ubuntu
 
 docker attach <hash>
 
-### detach from a running container Ctrl + P   then   Ctrl + Q
+\# detach from a running container Ctrl + P   then   Ctrl + Q
 
 docker run -it -d -p 8080:80 nginx        # host → container
 
