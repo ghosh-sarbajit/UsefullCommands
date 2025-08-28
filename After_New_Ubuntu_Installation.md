@@ -21,16 +21,16 @@ sudo apt-get install build-essential gcc make perl dkms python3-pip vim net-tool
 
 sudo apt-get install gedit gimp shotwell dia xfig obs-studio xournalpp vlc curl ranger
 
-sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm # KVM
+sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm podman # KVM
 
-sudo apt install code podman destrobox
+sudo apt install code distrobox # works in ubuntu 24
 
 reboot
 
 ```
 
 
-other things to install: R, RStudio, Miniconda, VirtualBox
+other things to install: R, RStudio, Miniconda, VSconde, VirtualBox
 
 sudo apt install fonts-liberation fonts-freefont-ttf fonts-noto # free fonts
 
@@ -57,7 +57,11 @@ ssh localhost
 
 /etc/ssh/sshd_config
 
-
 sudo vim /etc/default/grub
 
 sudo update-grub
+
+# Transfer gnome terminal properties
+
+dconf dump /org/gnome/terminal/legacy/profiles:/ > gnome-terminal-profiles.conf
+dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.conf
