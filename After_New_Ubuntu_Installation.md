@@ -61,7 +61,8 @@ sudo vim /etc/default/grub
 
 sudo update-grub
 
-# Transfer gnome terminal properties
+# Transfer gnome terminal profiles
 
 dconf dump /org/gnome/terminal/legacy/profiles:/ > gnome-terminal-profiles.conf
+
 dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.conf
