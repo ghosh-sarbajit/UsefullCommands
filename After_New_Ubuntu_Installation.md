@@ -19,7 +19,7 @@ Install Guest Additions CD Image on VirtualBox
 ```
 sudo apt-get install build-essential gcc make perl dkms python3-pip vim net-tools git tmux screen openssh-server ffmpeg tree htop
 
-sudo apt-get install gedit gimp shotwell dia xfig obs-studio xournalpp vlc curl ranger
+sudo apt-get install gedit gimp shotwell dia xfig obs-studio xournalpp vlc curl ranger code
 
 sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm # KVM
 
@@ -28,7 +28,7 @@ reboot
 ```
 
 
-other things to install: R, RStudio, Miniconda, VSCode, VirtualBox
+other things to install: R, RStudio, Miniconda, VirtualBox
 
 sudo apt install fonts-liberation fonts-freefont-ttf fonts-noto # free fonts
 
