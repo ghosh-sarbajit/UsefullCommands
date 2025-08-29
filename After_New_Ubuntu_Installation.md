@@ -21,7 +21,7 @@ sudo apt-get install build-essential gcc make perl dkms python3-pip vim net-tool
 
 sudo apt-get install gedit gimp shotwell dia xfig obs-studio xournalpp vlc curl ranger
 
-sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm podman
+sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm gnome-boxes podman
 
 sudo apt install code distrobox # works in ubuntu 24
 
