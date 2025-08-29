@@ -30,7 +30,7 @@ reboot
 ```
 
 
-other things to install: R, RStudio, Miniconda, VSconde, VirtualBox
+other things to install: R, RStudio, Miniconda, VScode, VirtualBox
 
 sudo apt install fonts-liberation fonts-freefont-ttf fonts-noto # free fonts
 
