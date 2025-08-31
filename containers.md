@@ -50,9 +50,15 @@ docker attach <hash>
 docker run -it -d -p 8080:80 nginx        # host → container
 
 docker run -it -d --restart --unless-stopped -p 8080:80 nginx
+
+docker stop <hash>
+
+docker commit <IDNum>  <NewName>  <Image> lltv/apache-test:1.0
+
+docker stop <ID>
 ```
 
-# Distrobox
+# Singularity
 
 ```bash
 #################
@@ -80,10 +86,4 @@ singularity exec --writable --fakeroot r_sandbox Rscript -e 'install.packages("t
 singularity exec --writable --fakeroot r_sandbox Rscript myscript.R
 
 singularity shell --writable --fakeroot r_sandbox
-
-docker stop <hash>
-
-docker commit <IDNum>  <NewName>  <Image> lltv/apache-test:1.0
 ```
-
-docker stop <ID>
