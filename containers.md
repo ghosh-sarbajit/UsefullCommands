@@ -77,13 +77,11 @@ singularity build --sandbox r_sandbox r.def
 
 singularity build --sandbox r_sandbox r.sif
 
-singularity shell --writable --fakeroot r_sandbox # inter activate
+singularity shell --writable --fakeroot r_sandbox # interactivate
 
 singularity build r_new.sif r_sandbox # sandbox to sif container
 
 singularity exec --writable --fakeroot r_sandbox Rscript -e 'install.packages("tidyverse")' # also run a single command
 
 singularity exec --writable --fakeroot r_sandbox Rscript myscript.R
-
-singularity shell --writable --fakeroot r_sandbox
 ```
