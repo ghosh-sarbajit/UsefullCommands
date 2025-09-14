@@ -114,7 +114,9 @@ pdfseparate
 
 pdfunite
 
-pdftk pdf1.pdf pdf2.pdf cat output merged.pdf
+pdftk pdf1.pdf pdf2.pdf cat output merged.pdf # merge pdf
+
+pdftk input.pdf cat 51-80 output output.pdf # extract pages
 
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=foo-compressed.pdf foo.pdf
 
