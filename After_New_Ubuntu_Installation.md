@@ -2,9 +2,9 @@
 
 sudo apt-get purge libreoffice*
 
-sudo apt-get autoremove --purge
-
 sudo apt-get clean
+
+sudo apt-get autoremove --purge
 
 dpkg -l | grep libreoffice
 
