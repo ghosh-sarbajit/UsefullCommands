@@ -1,1 +1,26 @@
+## Prompt 1
 
+Input:
+
+@inproceedings{brown2022does,
+    title = "What does it mean for a language model to preserve privacy?",
+    booktitle = "Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency",
+    pages = "2280--2292",
+    year = "2022",
+    url = "https://doi.org/10.1145/3531146.3534642",
+    doi = "10.1145/3531146.3534642"
+}
+
+Output:
+
+@inproceedings{brown2022does,
+  title={What does it mean for a language model to preserve privacy?},
+  author={Brown, Hannah and Lee, Katherine and Mireshghallah, Fatemehsadat and Shokri, Reza and Tram{\`e}r, Florian},
+  booktitle={Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency},
+  pages={2280--2292},
+  year={2022},
+  howpublished = "\url{https://doi.org/10.1145/3531146.3534642}",
+  comment = {}
+}
+
+Now convert all the entries in the attached file.
