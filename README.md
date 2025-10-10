@@ -199,3 +199,7 @@ Then in any tmux session press Ctrl+b followed by :source-file ~/.tmux.conf
 sudo umount /dev/sdb1
 
 sudo mkfs.vfat -I /dev/sdb
+
+**Compression**
+
+tar -cvf folder.tar.xz -I 'xz -9e -T100' folder
