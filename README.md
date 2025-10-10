@@ -34,6 +34,8 @@ rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive &
 
 rclone copy ~/file OneDrive:/PATH
 
+rclone configuration file: ~/.config/rclone/rclone.conf
+
 **Creating an SSH key**
 
 The SSH key resides on your machine in the folder ~/.ssh
