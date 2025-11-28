@@ -109,9 +109,13 @@ Toggle to the last active pane: Ctrl + b ;
 tmux attach-session -t \[SessionName\]
 
 for i in {1..5}; do
+
   tmux new-session -d -s $i
+  
   tmux send-keys -t $i "cd /path/to/the/folder" C-m
+  
   tmux send-keys -t $i "conda activate EnvName" C-m
+  
 
 **PDF Manipulation**
 
