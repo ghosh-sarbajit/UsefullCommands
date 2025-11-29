@@ -12,3 +12,5 @@ squeue -j JobID -o "%.18i %.8u %.9P %.20V %.6D %.10M %.10l %.6C %R"
 
 srun --nodelist=NodeName --partition=iitk_h200 --gres=gpu:2 --cpus-per-task=50 --mem=500G --time=120:00:00 --pty bash
 
+for job in $(squeue -h -o "%A" | grep -v "_"); do echo "### $job ###"; scontrol show job $job | grep -e "AllocTRES" -e "UserId" -e "GRES"; done
+
