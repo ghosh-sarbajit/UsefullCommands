@@ -114,7 +114,13 @@ for i in {1..5}; do
     tmux send-keys -t $i "cd /path/to/the/folder" C-m
     tmux send-keys -t $i "conda activate EnvName" C-m
 done
+
+for i in {1..5}; do
+    tmux kill-session -t $i
+done
 ```
+
+
 
 **PDF Manipulation**
 
