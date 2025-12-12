@@ -132,6 +132,8 @@ pdftk pdf1.pdf pdf2.pdf cat output merged.pdf # merge pdf
 
 pdftk input.pdf cat 51-80 output output.pdf # extract pages
 
+pdftk A=oct_2025.pdf B=nov_2025.pdf cat A3-end A3-end B3-end B3-end output merged.pdf
+
 qpdf --password='CURRENT_PASSWORD' --decrypt protected.pdf unlocked.pdf # remove password authentication
 
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=foo-compressed.pdf foo.pdf
