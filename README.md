@@ -34,6 +34,10 @@ rclone copy ~/file OneDrive:/PATH
 
 rclone configuration file: ~/.config/rclone/rclone.conf
 
+**Rsync**
+
+rsync -avh --progress location1 location2
+
 **Creating an SSH key**
 
 The SSH key resides on your machine in the folder ~/.ssh
