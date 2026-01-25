@@ -14,3 +14,7 @@ srun --nodelist=NodeName --partition=iitk_h200 --gres=gpu:2 --cpus-per-task=50 -
 
 for job in $(squeue -h -o "%A" | grep -v "_"); do echo "### $job ###"; scontrol show job $job | grep -e "AllocTRES" -e "UserId" -e "GRES"; done
 
+squeue -u $USER
+
+scancel 1234567
+
