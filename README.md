@@ -20,6 +20,12 @@ conda create --name EnvName python=3.8
 
 conda activate EnvName
 
+conda config --show channels
+
+conda config --add channels conda-forge
+
+conda config --set channel_priority strict
+
 conda install -c conda-forge r-base=4.5
 
 conda deactivate
