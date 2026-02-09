@@ -20,6 +20,8 @@ conda create --name EnvName python=3.8
 
 conda activate EnvName
 
+conda install -c conda-forge r-base=4.5
+
 conda deactivate
 
 conda env remove --name EnvName
