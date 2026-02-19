@@ -19,41 +19,42 @@ up () {
     cd "$d" || return
 }
 
-
 tarxz() {
-    # Case 1: No arguments
+    # No arguments
     if [ "$#" -eq 0 ]; then
         echo "Usage:"
-        echo "  tarxz <folder>                       -> creates folder.tar.xz"
-        echo "  tarxz <archive.tar.xz> <folder...>   -> custom archive name"
+        echo "  tarxz <file_or_folder>                  -> creates name.tar.xz"
+        echo "  tarxz <archive.tar.xz> <items...>       -> custom archive name"
         return 1
     fi
 
     local archive
-    local folders=()
+    local items=()
 
-    # Case 2: Only one argument → auto archive name
+    # ---- Case 1: single argument ----
     if [ "$#" -eq 1 ]; then
-        local folder="$1"
+        local item="$1"
 
-        if [ ! -d "$folder" ]; then
-            echo "Error: '$folder' is not a directory"
+        if [ ! -e "$item" ]; then
+            echo "Error: '$item' does not exist"
             return 1
         fi
 
-        archive="${folder%/}.tar.xz"   # remove trailing slash if exists
-        folders=("$folder")
+        # remove trailing slash if directory
+        item="${item%/}"
+        archive="$(basename "$item").tar.xz"
+        items=("$item")
 
+    # ---- Case 2: ≥2 arguments ----
     else
-        # Case 3: ≥2 args → first is archive name
         archive="$1"
         shift
-        folders=("$@")
+        items=("$@")
 
-        # Validate all folders
-        for folder in "${folders[@]}"; do
-            if [ ! -d "$folder" ]; then
-                echo "Error: '$folder' is not a directory"
+        # Validate all items exist
+        for item in "${items[@]}"; do
+            if [ ! -e "$item" ]; then
+                echo "Error: '$item' does not exist"
                 return 1
             fi
         done
@@ -66,7 +67,7 @@ tarxz() {
 
     # Compress
     echo "Compressing into: $archive"
-    tar -cvf "$archive" -I "xz -9e -T${cores}" "${folders[@]}"
+    tar -cvf "$archive" -I "xz -9e -T${cores}" "${items[@]}"
 
     if [ $? -eq 0 ]; then
         echo "Successfully created: $archive"
