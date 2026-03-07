@@ -76,3 +76,10 @@ tarxz() {
         return 1
     fi
 }
+
+alias gs='git status'
+alias gp='git pull'
+
+alias tma='tmux attach -t'
+alias tml='tmux ls'
+alias tmn='tmux new -s'
