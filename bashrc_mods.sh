@@ -79,6 +79,7 @@ tarxz() {
 
 alias gs='git status'
 alias gp='git pull'
+alias gcl='git clone'
 
 alias tma='tmux attach -t'
 alias tml='tmux ls'
