@@ -84,3 +84,14 @@ alias gcl='git clone'
 alias tma='tmux attach -t'
 alias tml='tmux ls'
 alias tmn='tmux new -s'
+
+# HIST CONTROL
+HISTSIZE=1000
+HISTFILESIZE=20000
+HISTCONTROL=ignoreboth:erasedups
+HISTIGNORE="ls:cd:pwd:history:exit:clear"
+
+__my_prompt_cmd() { history -a; history -c; history -r; }
+PROMPT_COMMAND="__my_prompt_cmd"
+
+shopt -s histappend # Ubuntu 22.04 already had this
