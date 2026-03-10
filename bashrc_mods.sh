@@ -89,7 +89,7 @@ alias tmn='tmux new -s'
 HISTSIZE=1000
 HISTFILESIZE=20000
 HISTCONTROL=ignoreboth:erasedups
-HISTIGNORE="ls:cd:pwd:history:exit:clear"
+HISTIGNORE="ls:pwd:history:exit:clear"
 
 __my_prompt_cmd() { history -a; history -c; history -r; }
 PROMPT_COMMAND="__my_prompt_cmd"
