@@ -87,7 +87,7 @@ singularity exec --writable --fakeroot r_sandbox Rscript myscript.R
 ```
 
 
-# Debian GNU/Herd VirtualBox 
+# Debian GNU/Hurd in VirtualBox 
 
 ```bash
 VBoxManage createvm --name "Debian-Hurd" --ostype "Other_64" --register
