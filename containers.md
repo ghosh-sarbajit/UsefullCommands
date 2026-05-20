@@ -124,3 +124,9 @@ sudo apt install socat
 
 socat STDIO UNIX-CONNECT:/tmp/hurd-console
 ```
+
+# KVM/QEMU
+
+```bash
+kvm -m 2G -drive file=debian-hurd-amd64-20260314.img,format=raw,cache=writeback
+```
