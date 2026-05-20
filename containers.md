@@ -85,3 +85,42 @@ singularity exec --writable --fakeroot r_sandbox Rscript -e 'install.packages("t
 
 singularity exec --writable --fakeroot r_sandbox Rscript myscript.R
 ```
+
+
+# Debian GNU/Herd VirtualBox 
+
+```bash
+VBoxManage createvm --name "Debian-Hurd" --ostype "Other_64" --register
+
+VBoxManage modifyvm "Debian-Hurd" --memory 4096 --cpus 1 --firmware bios --ioapic on --boot1 disk --nic1 nat --nictype1 82540EM --audio-enabled off
+
+VBoxManage storagectl "Debian-Hurd" --name "IDE Controller" --add ide
+
+file ~/ISOs/debian-hurd-amd64-20260314.img
+
+VBoxManage convertfromraw ~/ISOs/debian-hurd-amd64-20260314.img ~/ISOs/debian-hurd-amd64-20260314.vdi --format vdi
+
+VBoxManage storageattach "Debian-Hurd" --storagectl "IDE Controller" --port 0 --device 0 --type hdd --medium ~/ISOs/debian-hurd-amd64-20260314.vdi
+
+VBoxManage modifyvm "Debian-Hurd" --vrde on --vrdeport 5000
+
+wget https://download.virtualbox.org/virtualbox/7.2.0/Oracle_VirtualBox_Extension_Pack-7.2.0.vbox-extpack
+
+sudo VBoxManage extpack install Oracle_VirtualBox_Extension_Pack-7.2.0.vbox-extpack
+
+VBoxManage startvm "Debian-Hurd" --type headless
+
+VBoxManage list runningvms
+
+VBoxManage showvminfo "Debian-Hurd" | grep VRDE
+
+ss -tulpn | grep 5000
+
+VBoxManage controlvm "Debian-Hurd" poweroff
+
+VBoxManage modifyvm "Debian-Hurd" --uart1 0x3F8 4 --uartmode1 server /tmp/hurd-console
+
+sudo apt install socat
+
+socat STDIO UNIX-CONNECT:/tmp/hurd-console
+```
