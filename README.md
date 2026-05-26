@@ -233,3 +233,27 @@ sudo mkfs.vfat -I /dev/sdb
 **Compression**
 
 tar -cvf folder.tar.xz -I 'xz -9e -T100' folder
+
+**Grab a window using ffmpeg**
+
+echo $XDG_SESSION_TYPE
+
+echo $DISPLAY
+
+xwininfo
+
+pactl list short sources
+
+ffmpeg \
+    -f x11grab \
+    -framerate 30 \
+    -window_id 0xc00017 \ # xwininfo
+    -i :1 \ # echo $DISPLAY
+    -f pulse \ 
+    -i alsa_output.pci-0000_00_1f.3.analog-stereo.monitor \ # pactl list short sources
+    -c:v libx264 \
+    -preset veryfast \
+    -crf 23 \
+    -c:a aac \
+    -b:a 128k \
+    vid.mp4
