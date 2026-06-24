@@ -95,3 +95,41 @@ __my_prompt_cmd() { history -a; history -c; history -r; }
 PROMPT_COMMAND="__my_prompt_cmd"
 
 shopt -s histappend # Ubuntu 22.04 already had this
+
+gpu-check() {
+    for pid in $(nvidia-smi --query-compute-apps=pid --format=csv,noheader,nounits | sort -u); do
+        echo "======================================================"
+        echo "PID: $pid"
+
+        USER=$(ps -o user= -p "$pid" 2>/dev/null || echo "N/A")
+        PARENT_PID=$(ps -o ppid= -p "$pid" 2>/dev/null || echo "N/A")
+
+        echo "User    : $USER"
+        echo "Parent  : $PARENT_PID"
+
+        if [ -r "/proc/$pid/cmdline" ]; then
+            CMDLINE=$(tr '\0' ' ' < "/proc/$pid/cmdline" | sed 's/ $//')
+            echo "Cmdline : $CMDLINE"
+        else
+            echo "Cmdline : (unavailable)"
+        fi
+
+        echo "CWD     : $(readlink -f /proc/$pid/cwd 2>/dev/null || echo 'N/A')"
+
+        echo "GPU Usage:"
+        nvidia-smi --query-compute-apps=gpu_uuid,pid,used_gpu_memory \
+                   --format=csv,noheader,nounits |
+        while IFS=',' read -r uuid p mem; do
+            p=$(echo "$p" | xargs)
+            if [ "$p" = "$pid" ]; then
+                gpu=$(nvidia-smi --query-gpu=index,uuid \
+                                 --format=csv,noheader,nounits |
+                      awk -F',' -v uuid="$(echo "$uuid" | xargs)" \
+                      '$2 ~ uuid {print $1}')
+                echo "  GPU $gpu : ${mem} MiB"
+            fi
+        done
+
+        echo
+    done
+}
