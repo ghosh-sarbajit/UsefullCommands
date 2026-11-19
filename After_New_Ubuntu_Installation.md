@@ -66,3 +66,57 @@ sudo update-grub
 dconf dump /org/gnome/terminal/legacy/profiles:/ > gnome-terminal-profiles.conf
 
 dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.conf
+
+# Some open-source software
+
+**Electronic**
+
+KiCad — Professional Electronics Design
+
+**GIS software**
+
+QGIS — Making Sense of Geographic Data
+
+**Audio**
+
+Audacity - digital audio editor
+
+Ardour — Professional Audio, Open Source
+
+**Images**
+
+GIMP -  raster graphics (Photo editing and image manipulation) editor
+
+Krita - raster graphics (Digital painting and illustration) editor
+
+Inkscape - vector graphics editor
+
+darktable — The Science of Light
+
+Scribus — Professional Publishing
+
+**Video**
+
+Blender - 3D computer graphics software
+
+Natron — Behind the Visual Effects
+
+Kdenlive — non-linear video editing
+
+**Coding**
+
+GNU Octave — From Textbook to Scientific Computing
+
+**Civil**
+
+FreeCAD — The Long Road to Version 1.0
+
+Mayo - The Open-Source 3D CAD Viewer and Converter
+
+**Browser**
+
+Browsh - Terminal-based browser
+
+**Music**
+
+LilyPond - music notation for everyone
