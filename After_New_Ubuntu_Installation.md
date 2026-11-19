@@ -69,7 +69,7 @@ dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.conf
 
 # Some open-source software
 
-**Electronic**
+**Electronics**
 
 KiCad — Professional Electronics Design
 
